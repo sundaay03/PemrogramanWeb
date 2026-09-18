@@ -1,17 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project bersama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kelompok - Landing Page</title>
+    <style>
+        /* CSS Reset & Variable */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        /* Header Style */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e8f4fd;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* Grid Layout 2 Orang */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Card Styling */
+        .card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .profile-info h2 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .profile-info .desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        /* Button Link */
+        .btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 12px 0;
+            background-color: #3498db;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>
-    Landing Page
-  </h1>
-  <ul>
-    <li><a href="./Fpage/">Punya Fauzan</a></li>
-    <li><a href="./sandi/">Punya Sandi</a></li>
-  </ul>
+
+    <div class="container">
+        <!-- Header Tugas -->
+        <div class="header">
+            <span class="badge">Tugas Pemrograman Web</span>
+            <h1>Portal Landing Page Kelompok</h1>
+            <p>Pilih halaman di bawah untuk melihat hasil pengerjaan tugas masing-masing anggota.</p>
+        </div>
+
+        <!-- Grid 2 Anggota -->
+        <div class="team-grid">
+
+            <!-- Anggota 1 -->
+            <div class="card">
+                <div class="profile-info">
+                    <h2 id="name1">Nama Anggota 1</h2>
+                    <p class="desc" id="desc1">Bertanggung jawab membuat Halaman 1 (Fitur A & B).</p>
+                </div>
+                <a href="page1.html" class="btn" id="link1">Buka Halaman 1 &rarr;</a>
+            </div>
+
+            <!-- Anggota 2 -->
+            <div class="card">
+                <div class="profile-info">
+                    <h2 id="name2">Nama Anggota 2</h2>
+                    <p class="desc" id="desc2">Bertanggung jawab membuat Halaman 2 (Fitur C & D).</p>
+                </div>
+                <a href="page2.html" class="btn" id="link2">Buka Halaman 2 &rarr;</a>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 - Tugas Kelompok Web Development</p>
+        </div>
+    </div>
+
+    <script>
+        // Data Anggota (Bisa diubah langsung di sini)
+        const anggota1 = {
+            nama: "Sandi Riandi",
+            deskripsi: "Mengembangkan Halaman 1.",
+            urlPage: "sandi/index.html" // Path/URL ke halaman 1
+        };
+
+        const anggota2 = {
+            nama: "Fauzan Al anshori",
+            deskripsi: "Mengembangkan Halaman 2.",
+            urlPage: "Fpage/Index.html" // Path/URL ke halaman 2
+        };
+
+        // Fungsi Render Data ke HTML
+        function loadData() {
+            // Render Anggota 1
+            document.getElementById('name1').textContent = anggota1.nama;
+            document.getElementById('desc1').textContent = anggota1.deskripsi;
+            document.getElementById('link1').href = anggota1.urlPage;
+
+            // Render Anggota 2
+            document.getElementById('name2').textContent = anggota2.nama;
+            document.getElementById('desc2').textContent = anggota2.deskripsi;
+            document.getElementById('link2').href = anggota2.urlPage;
+        }
+
+        // Jalankan fungsi saat halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
 </body>
 </html>

@@ -12,26 +12,26 @@ let data = [
   {
     title: "buku",
     tags: ["baca", "perpustakaan"],
-    img: "",
+    img: "./Buku.jpg",
     paragraph: "buku dapat di baca di perpustakaan",
   },
   {
     title: "pulpen",
     tags: ["alat tulis", "sekolah", "kantor"],
-    img: "",
+    img: "./Pulpen.jpg",
     paragraph:
       "pulpen digunakan sebagai alat tulis di sekolah maupun di kantor",
   },
   {
     title: "ayam celup",
     tags: ["makanan", "kantin"],
-    img: "",
+    img: "./AyamCelup.jpg",
     paragraph: "ayam celup adalah salah satu makanan yang tersedia di kantin",
   },
   {
     title: "es teh anget",
     tags: ["ngawur", "minuman"],
-    img: "",
+    img: "Tesh.jpg",
     paragraph: "es teh anget adalah minuman yang ngawur",
   },
 ];
